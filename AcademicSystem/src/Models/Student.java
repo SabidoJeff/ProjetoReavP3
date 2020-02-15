@@ -35,4 +35,10 @@ public class Student extends Person{
 		return false;
 	}
 	
+	public String ToString() {
+		return super.ToString() + 
+				"Periodo: " + String.valueOf(Period) + "\n" +
+				"Projetos: " + Projects.toString();
+	}
+	
 }

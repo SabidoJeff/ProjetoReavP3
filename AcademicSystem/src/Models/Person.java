@@ -41,4 +41,15 @@ public abstract class Person {
 		return Name;
 	}
 	
+	public String ToString() {
+		return "Nome: " + Name + "\n" + 
+				"Idade: " + String.valueOf(Age) + "\n" +
+				"Matricula: " + Registration + "\n" +
+				"Email: " + Email + "\n";
+	}
+	
+	public abstract boolean AddProject(Project New);
+	
+	public abstract boolean RemoveProject(Project Removed);
+	
 }

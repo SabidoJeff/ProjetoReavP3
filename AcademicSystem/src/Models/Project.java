@@ -60,5 +60,41 @@ public class Project {
 		return false;
 	}
 	
+	public boolean AddProfessor(Professor New) {
+		if(New.AddProject(this)) {
+			Professors.add(New);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean RemoveProfessor(Professor Removed) {
+		if(Removed.RemoveProject(this)) {
+			int index = Professors.indexOf(Removed);
+			Professors.remove(index);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean AddResearcher(Researcher New) {
+		if(New.AddProject(this)) {
+			Researchers.add(New);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean RemoveResearcher(Researcher Removed) {
+		if(Removed.RemoveProject(this)) {
+			int index = Researchers.indexOf(Removed);
+			Researchers.remove(index);
+			return true;
+		}
+		return false;
+	}
+	
+	
+	
 	
 }
